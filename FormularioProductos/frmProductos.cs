@@ -31,7 +31,7 @@ namespace FormularioProductos
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             Producto producto = ObtenerProducto();
-            ProductManager.EliminarProducto(producto);
+            ProductManager.EliminarProducto(producto.Id);
             ObtenerRegistro();
             LimpiarCampos();
         }

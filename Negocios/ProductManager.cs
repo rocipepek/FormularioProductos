@@ -31,9 +31,9 @@ namespace Negocios
             }
         }
 
-        public static void EliminarProducto(Producto producto)
+        public static void EliminarProducto(int Id)
         {
-            if (producto.Id.Equals(0))
+            if (Id.Equals(0))
             {
                 //No se selecciono ningun producto
                 MessageBox.Show("Seleccione un producto", "Atención");
@@ -42,7 +42,7 @@ namespace Negocios
             {
                 if (MessageBox.Show("¿Está seguro que desea eliminar el producto?", "Eliminar Producto", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    DataProduct.Eliminar(producto);
+                    DataProduct.Eliminar(Id);
                 }
             }
         }
